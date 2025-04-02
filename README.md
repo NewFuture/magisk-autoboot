@@ -29,9 +29,7 @@ After installation, your Android will boot automatically on cable connected.
 
 ## Usage
 
-This module adds `autoboot.init.rc` and `autoboot.sh` to the boot image. The patching process can be viewed in `scripts/boot_patch.sh`. The `scripts` folder is obtained from the installed Magisk on Android in the `/data/adb/magisk` folder. Only some necessary code is imported and then modified for patching `boot.img`. 
-
-In the `autoboot.sh` file, `MIN_CAPACITY=5` is set as the minimum battery percentage threshold before Android boots automatically. If your battery percentage is below 5, the device will wait until it reaches this threshold before booting automatically. If you need to adjust this threshold, change the `MIN_CAPACITY` value in the `autoboot.sh` file and reflash this module.
+This module adds `autoboot.init.rc` to the boot image. The patching process can be viewed in `scripts/boot_patch.sh`. The `scripts` folder is obtained from the installed Magisk on Android in the `/data/adb/magisk` folder. Only some necessary code is imported and then modified for patching `boot.img`. 
 
 In case of any errors, your current boot image is backed up under `/data/adb/modules/magisk-autoboot/`. If something happens, you can safely restore them.
 
